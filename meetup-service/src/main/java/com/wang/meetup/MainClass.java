@@ -11,7 +11,6 @@ import com.wang.database.tx.configuration.TransactionManagerConfigure;
 import com.wang.security.configure.SecurityConfigure;
 import com.wang.web.configure.ApplicationCoreConfigure;
 
-//@EnableAutoConfiguration
 @ComponentScan
 @Import(value = { SecurityConfigure.class, ApplicationCoreConfigure.class, MyBatisConfiguration.class,
 		TransactionManagerConfigure.class })
