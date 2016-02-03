@@ -1,0 +1,1 @@
+INSERT INTO Categories(name) values("IT");

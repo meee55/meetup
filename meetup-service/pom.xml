@@ -12,5 +12,57 @@
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <web.core.version>1.0.0-SNAPSHOT</web.core.version>
+    <web.security.version>1.0.0-SNAPSHOT</web.security.version>
+    <database.tx.version>0.0.1-SNAPSHOT</database.tx.version>
+    <database.mybatis.version>0.0.1-SNAPSHOT</database.mybatis.version>
   </properties>
+  
+  <dependencies>
+ 	 <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-autoconfigure</artifactId>
+			<version>${spring.boot.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.34</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.wang</groupId>
+			<artifactId>web-core</artifactId>
+			<version>${web.core.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.wang</groupId>
+			<artifactId>web-security</artifactId>
+			<version>${web.security.version}</version>
+			<exclusions>
+	            <exclusion>
+	                <groupId>org.springframework.boot</groupId>
+	                <artifactId>spring-boot-starter-logging</artifactId>
+	            </exclusion>
+	            <!-- <exclusion>
+	                <groupId>com.wang</groupId>
+	                <artifactId>web-core</artifactId>
+	            </exclusion> -->
+	        </exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>com.wang</groupId>
+			<artifactId>database-tx</artifactId>
+  			<version>${database.tx.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.wang</groupId>
+			<artifactId>database-mybatis</artifactId>
+  			<version>${database.mybatis.version}</version>
+		</dependency>
+  </dependencies>
 </project>
